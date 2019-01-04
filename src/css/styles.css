@@ -1,3 +1,9 @@
+.title {
+  font-size: 4em;
+  line-height: 1em;
+  color: dodgerblue;
+}
+
 h1 {
   color: rebeccapurple;
 }

@@ -13,12 +13,14 @@ fs.readdir(pages, (err, files) => {
     var str = fs.readFileSync(`./pages/${file}`, "utf8");
     // PARSE FRONT MATTER W/DATA AND CONTENT
     const theMatter = matter(str);
+    console.log(theMatter.data);
+    
     // GET NAME STRING OF CONTENT FILE
     const fileName = file.split('.')[0];
     // CONVERT MARKDOWN TO HTML
     const prettyDown = md.render(theMatter.content);
     // RENDER TEMPALTE WITH MD CONTENT
-    const pretty = nunjucks.render(`${fileName}.njk`, { content: prettyDown });
+    const pretty = nunjucks.render(`${fileName}.njk`, { content: prettyDown, data: theMatter.data });
     // SAVE FILE WITH STRING NAME
     fs.writeFile(`./src/${fileName}.html`, pretty, function (err) {
       if (err) throw err;
