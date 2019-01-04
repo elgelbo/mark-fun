@@ -1,0 +1,25 @@
+{
+  "name": "mark-fun",
+  "version": "1.0.0",
+  "description": "Fun with Markdown!",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elgelbo/mark-fun.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "El Gelbo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elgelbo/mark-fun/issues"
+  },
+  "homepage": "https://github.com/elgelbo/mark-fun#readme",
+  "dependencies": {
+    "gray-matter": "^4.0.1",
+    "markdown-it": "^8.4.2"
+  }
+}
