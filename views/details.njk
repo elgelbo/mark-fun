@@ -1,0 +1,7 @@
+{% extends "base.njk" %}
+{% block layoutContent %}
+  <h2>Hello from Child Template</h2>
+  {{ content }}
+  {{ data.title | string }}
+  <script src="./js/main.js"></script>
+{% endblock %}
