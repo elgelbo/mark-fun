@@ -1,6 +1,7 @@
 ---
-layout: mylayout.njk
-title: My Rad Blog
+title: Home
+date: 
+thumbnail:
+rating:
 ---
 # markdown-it rulezz!
-## About Page

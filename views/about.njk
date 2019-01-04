@@ -1,10 +1,6 @@
-<html>
-<header> 
-<link rel="stylesheet" href="./css/styles.css">
-</header>
-<body>
-  <h1>Hello</h1>
+{% extends "base.njk" %}
+{% block layoutContent %}
+  <h2>Hello from Child Template</h2>
   {{ content }}
   <script src="./js/main.js"></script>
-</body>
-</html>
+{% endblock %}

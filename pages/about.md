@@ -1,6 +1,5 @@
 ---
-layout: mylayout.njk
-title: My Rad Blog
+title: About
 date: 
 thumbnail:
 rating:
