@@ -20,6 +20,7 @@
   "homepage": "https://github.com/elgelbo/mark-fun#readme",
   "dependencies": {
     "gray-matter": "^4.0.1",
-    "markdown-it": "^8.4.2"
+    "markdown-it": "^8.4.2",
+    "nunjucks": "^3.1.6"
   }
 }
