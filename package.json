@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Fun with Markdown!",
   "scripts": {
-    "start": "node index.js"
+    "gen": "npm run render && npm run bundle",
+    "render": "node render.js",
+    "bundle": "parcel build ./src/*.html -d dist --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
     "gray-matter": "^4.0.1",
     "markdown-it": "^8.4.2",
     "nunjucks": "^3.1.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
   }
 }

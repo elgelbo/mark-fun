@@ -1,12 +1,13 @@
-const fs = require ('fs')
+const fs = require('fs')
 const matter = require('gray-matter');
 const md = require('markdown-it')();
 const nunjucks = require('nunjucks')
 const pages = './pages/';
 
 nunjucks.configure('views', { autoescape: false });
-
+// READ PAGES DIR
 fs.readdir(pages, (err, files) => {
+  // ITERATE OVER EACH FILE IN PAGES DIR
   files.forEach(file => {
     // READ MARKDOWN FILE (EDITABLE BY CMS/GIT)
     var str = fs.readFileSync(`./pages/${file}`, "utf8");
@@ -17,11 +18,11 @@ fs.readdir(pages, (err, files) => {
     // CONVERT MARKDOWN TO HTML
     const prettyDown = md.render(theMatter.content);
     // RENDER TEMPALTE WITH MD CONTENT
-    const pretty = nunjucks.render(`${fileName}.njk`, {content: prettyDown});
+    const pretty = nunjucks.render(`${fileName}.njk`, { content: prettyDown });
     // SAVE FILE WITH STRING NAME
-    fs.writeFile(`./dist/${fileName}.html`, pretty, function (err) {
+    fs.writeFile(`./src/${fileName}.html`, pretty, function (err) {
       if (err) throw err;
-      console.log(`Saved: /dist/${fileName}.html`);
-    }); 
+      console.log(`Saved: /src/${fileName}.html`);
+    });
   });
 });
