@@ -9,9 +9,10 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  {% include "components/nav.njk" %}
   <h1 class="title">{{ data.title }}</h1>
   {% if placeContent %}
-  {{ placeContent }}
+    {{ placeContent }}
   {% else %}
     {% block layoutContent %}{% endblock %}
   {% endif %}
