@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elgelbo/mark-fun.git"
+    "url": "git+https://github.com/elgelbo/render-and-bundle.git"
   },
   "keywords": [
     "markdown"
@@ -17,9 +17,9 @@
   "author": "El Gelbo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elgelbo/mark-fun/issues"
+    "url": "https://github.com/elgelbo/render-and-bundle/issues"
   },
-  "homepage": "https://github.com/elgelbo/mark-fun#readme",
+  "homepage": "https://github.com/elgelbo/render-and-bundle#readme",
   "dependencies": {
     "gray-matter": "^4.0.1",
     "markdown-it": "^8.4.2",
