@@ -10,6 +10,10 @@
 </head>
 <body>
   <h1 class="title">{{ data.title }}</h1>
-  {% block layoutContent %}{% endblock %}
+  {% if placeContent %}
+  {{ placeContent }}
+  {% else %}
+    {% block layoutContent %}{% endblock %}
+  {% endif %}
 </body>
 </html>

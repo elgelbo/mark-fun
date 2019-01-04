@@ -22,7 +22,7 @@ fs.readdir(pages, (err, files) => {
     // const pretty = nunjucks.render(`${fileName}.njk`, { content: prettyDown, data: theMatter.data });
     const pretty = nunjucks.render(`${fileName}.njk`, { content: prettyDown, data: theMatter.data }, function (err, res) {
       if (err) {
-        const pretty = nunjucks.render(`base.njk`, { layoutContent: prettyDown, data: theMatter.data });
+        const pretty = nunjucks.render(`base.njk`, { placeContent: prettyDown, data: theMatter.data });
         fs.writeFile(`./src/${fileName}.html`, pretty, function (err) {
           if (err) {throw err};
           console.log(`Saved: /src/${fileName}.html`);
