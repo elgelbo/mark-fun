@@ -1,9 +1,15 @@
-.title {
-  font-size: 4em;
-  line-height: 1em;
-  color: dodgerblue;
+body,
+html {
+  /* height: 100%; */
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1 {
-  color: rebeccapurple;
+main {
+  margin: 0;
+  padding: 0 50px 50px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  background-color: #fffacd;
+  min-height: 50vh;
 }

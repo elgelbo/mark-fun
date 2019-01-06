@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
+{% include "components/head.njk" %}
 <body>
   {% include "components/nav.njk" %}
-  <h1 class="title">{{ data.title }}</h1>
-  {% if placeContent %}
-    {{ placeContent }}
-  {% else %}
-    {% block layoutContent %}{% endblock %}
-  {% endif %}
+  <main>
+      <h1 class="title">{{ data.title }}</h1>
+      {% if placeContent %}
+        {{ placeContent }}
+      {% else %}
+        {% block layoutContent %}{% endblock %}
+      {% endif %}
+  </main>
+  {% include "components/scripts.njk" %}
 </body>
 </html>

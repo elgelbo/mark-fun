@@ -5,7 +5,8 @@
   "scripts": {
     "gen": "npm run render && npm run bundle",
     "render": "node render.js",
-    "bundle": "parcel build ./src/*.html -d dist --public-url ./"
+    "bundle": "parcel build ./src/*.html -d dist --public-url ./",
+    "watch": "parcel watch ./src/*.html -d dist --public-url ./"
   },
   "repository": {
     "type": "git",

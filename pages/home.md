@@ -2,6 +2,6 @@
 title: Home
 date: 
 thumbnail:
-rating:
+rating: 1
 ---
 # markdown-it rulezz!

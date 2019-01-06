@@ -7,6 +7,14 @@ nunjucks.configure('views', { autoescape: false });
 
 nunjucks.configure('views', { autoescape: false });
 
+function compare(a,b) {
+  if (a.data.rating < b.data.rating)
+    return -1;
+  if (a.data.rating > b.data.rating)
+    return 1;
+  return 0;
+}
+
 exports.grey = () => {
   const rawMatter = new Array();
   const pages = fs.readdirSync('./pages');
@@ -17,6 +25,9 @@ exports.grey = () => {
     data.slug = fileName;
     rawMatter.push(data);
   })
+  rawMatter.sort(function (a, b) {
+    return a.data.rating - b.data.rating;
+  });
   return rawMatter;
 };
 
